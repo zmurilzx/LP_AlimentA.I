@@ -378,7 +378,7 @@ function CheckoutSection() {
         <div className="cta checkout-cta" data-reveal>
           <p className="microcopy warning">⚠️ Acesso limitado — quando as vagas encerram, só reabre na próxima abertura.</p>
           <p className="microcopy">Se em 7 dias você não sentir que está mais organizado(a), disciplinado(a) e no caminho certo, devolvo seu dinheiro.</p>
-          <a className="button" href="https://pay.kirvano.com/78e19700-8d66-4413-86a7-8c79df6b6163" rel="noopener noreferrer">
+          <a className="button" href="https://pay.cakto.com.br/jevbyq2_673427" rel="noopener noreferrer">
             Liberar Acesso Imediato
           </a>
         </div>
@@ -392,7 +392,7 @@ function FinalCta() {
     <section className="cta final" id="cta">
       <div className="container" data-reveal>
         <h2>Está pronto(a) para transformar seu corpo com a ajuda da IA?</h2>
-        <a className="button" href="https://pay.kirvano.com/78e19700-8d66-4413-86a7-8c79df6b6163" rel="noopener noreferrer">
+        <a className="button" href="https://pay.cakto.com.br/jevbyq2_673427" rel="noopener noreferrer">
           Quero meu acesso ao Aliment A.I.
         </a>
         <p className="subtitle">Acesso imediato · Comece em 60 segundos · Sem burocracia</p>
