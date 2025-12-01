@@ -213,6 +213,16 @@ section {
   margin: 1.2rem 0;
 }
 
+.microcopy {
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.microcopy.warning {
+  color: #c21f3a;
+}
+
 .hero-highlights {
   list-style: none;
   display: grid;
@@ -607,6 +617,10 @@ section {
 }
 
 .cta.final {
+  margin-top: 1.5rem;
+}
+
+.checkout-cta {
   margin-top: 1.5rem;
 }
 

@@ -49,194 +49,80 @@ function ShieldIcon() {
 }
 
 const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#o-que-faz", label: "Recursos" },
+  { href: "#inicio", label: "Início" },
+  { href: "#como-funciona", label: "Como funciona" },
   { href: "#para-quem", label: "Para quem" },
-  { href: "#prompts", label: "Exemplos" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contato", label: "Contato" },
+  { href: "#beneficios", label: "Benefícios" },
+  { href: "#diferente", label: "Diferencial" },
+  { href: "#exemplos", label: "Exemplos" },
+  { href: "#checkout", label: "Checkout" },
 ];
 
-const heroHighlights = [
-  "Cardápios semanais e substituições rápidas",
-  "Estimativa de calorias e macros por foto",
-  "Posts, copies e roteiros prontos para redes",
+const heroBullets = [
+  "Resultados mais rápidos",
+  "IA que realmente entende você",
+  "Dietas inteligentes sem sofrimento",
+  "IA treinada por nutricionista",
 ];
 
-const heroStats = [
-  { label: "Planos gerados", value: "+12.400" },
-  { label: "Tempo médio por entrega", value: "3 min" },
-  { label: "Atualizações da IA", value: "Semanais" },
-];
-
-const features = [
+const howSteps = [
   {
-    title: "Analisa pratos e corpo por imagem",
-    description: "Use fotos para estimar macros, identificar porções e ter um ponto de partida confiável.",
-    icon: <CameraIcon />,
+    title: "Você envia seus dados",
+    description: "Altura, peso, idade, rotina, objetivo e, se quiser, fotos do seu corpo.",
   },
   {
-    title: "Cardápios personalizados",
-    description: "Monte planos semanais com restrições, metas e substituições já prontas para o paciente ou cliente.",
-    icon: <LeafIcon />,
+    title: "A IA analisa tudo automaticamente",
+    description: "Interpreta suas imagens, calcula calorias ideais e entende o seu corpo.",
   },
   {
-    title: "Conteúdo pronto para redes",
-    description: "Carrosséis, posts e scripts em segundos, com linguagem ajustada ao seu público.",
-    icon: <SparkIcon />,
-  },
-  {
-    title: "Listas de compras inteligentes",
-    description: "Checklist otimizado para evitar desperdício e aproveitar ingredientes que você já tem.",
-    icon: <CheckIcon />,
-  },
-  {
-    title: "Alertas e lembretes",
-    description: "Ping de hidratação, sono e consistência alimentar para manter a rotina viva.",
-    icon: <ShieldIcon />,
-  },
-  {
-    title: "Cálculo rápido de tempo",
-    description: "Estimativas de preparo e execução para encaixar refeições na agenda real.",
-    icon: <ClockIcon />,
+    title: "Você recebe sua dieta personalizada",
+    description: "Cardápio, calorias diárias, sugestões e tudo o que precisa para começar hoje.",
   },
 ];
 
-const audiences = [
-  {
-    title: "Nutricionistas",
-    description: "Entregue planos e follow-ups com substituições claras e linguagem simples.",
-    icon: <LeafIcon />,
-  },
-  {
-    title: "Donos de restaurantes",
-    description: "Cardápios sazonais, descrições de pratos e ideias de combos prontos para delivery.",
-    icon: <SparkIcon />,
-  },
-  {
-    title: "Quem quer comer melhor",
-    description: "Planos semanais sem complicação, com lembretes leves e ajustes automáticos.",
-    icon: <ShieldIcon />,
-  },
-  {
-    title: "Criadores de conteúdo",
-    description: "Roteiros, carrosséis e posts focados em alimentação para postar sem travar.",
-    icon: <CameraIcon />,
-  },
-];
-
-const promptExamples = [
-  {
-    title: "Cardápio semanal saudável",
-    prompt: "Crie um cardápio semanal saudável para uma família de 4 pessoas, com café, almoço, lanche e jantar, incluindo substituições rápidas.",
-  },
-  {
-    title: "Hamburgueria delivery",
-    prompt: "Monte um cardápio para uma hamburgueria artesanal focada em delivery, com 6 opções de combos e descrição persuasiva de cada prato.",
-  },
-  {
-    title: "Posts para Instagram",
-    prompt: "Gere 5 posts para Instagram sobre alimentação saudável com foco em marmita fitness. Use tom próximo e direto, com CTA para salvar.",
-  },
-  {
-    title: "Lista de compras",
-    prompt: "Crie uma lista de compras para 5 dias low carb com opções de café da manhã, almoço e jantar que fiquem prontos em até 20 minutos.",
-  },
-  {
-    title: "Reaproveitamento de ingredientes",
-    prompt: "Sugira 4 refeições para aproveitar peito de frango, abobrinha e arroz integral, detalhando tempo de preparo e macros aproximados.",
-  },
-  {
-    title: "Plano para clínica",
-    prompt: "Monte um plano semanal para paciente com intolerância à lactose, priorizando receitas ricas em proteína e com substituições claras.",
-  },
-];
-
-const steps = [
-  {
-    title: "Conte o que precisa",
-    description: "Contexto, objetivo, restrições e, se quiser, fotos de pratos ou do corpo.",
-  },
-  {
-    title: "A IA cria o rascunho",
-    description: "Cardápios, posts, listas de compras e macros estimados chegam em minutos.",
-  },
-  {
-    title: "Ajuste em um clique",
-    description: "Troque refeições, refine tom de voz e gere versões alternativas imediatamente.",
-  },
-  {
-    title: "Itere quando quiser",
-    description: "Volte com novas perguntas e a IA mantém histórico para refinar entregas.",
-  },
+const forWho = [
+  "Quer perder peso sem sofrer",
+  "Cansou de dietas que você não consegue seguir",
+  "Não sabe o que comer no dia a dia",
+  "Quer ganhar massa muscular com mais organização",
+  "Não tem tempo para ir a nutricionistas",
+  "Quer ajuda rápida, inteligente e motivante",
 ];
 
 const benefits = [
-  {
-    title: "Economia de tempo real",
-    description: "Pare de começar do zero toda semana. Tenha entregas consistentes em minutos.",
-    icon: <ClockIcon />,
-  },
-  {
-    title: "Ideias ilimitadas",
-    description: "Receitas, prompts e copies variadas para manter o público engajado.",
-    icon: <SparkIcon />,
-  },
-  {
-    title: "Comunicação clara",
-    description: "Textos prontos para WhatsApp, Instagram e cardápios que convertem.",
-    icon: <CheckIcon />,
-  },
-  {
-    title: "Organização visual",
-    description: "Planos com layout limpo e fácil de ler, sem planilhas confusas.",
-    icon: <ShieldIcon />,
-  },
+  { title: "Dieta montada em minutos", icon: <ClockIcon /> },
+  { title: "Entende suas fotos (corpo + comida)", icon: <CameraIcon /> },
+  { title: "Ajusta o plano conforme sua rotina", icon: <SparkIcon /> },
+  { title: "Cálculo automático de calorias", icon: <CheckIcon /> },
+  { title: "Motivação diária", icon: <ShieldIcon /> },
+  { title: "Sugestões simples e baratas", icon: <LeafIcon /> },
+  { title: "Tecnologia avançada que evolui", icon: <SparkIcon /> },
 ];
 
-const testimonials = [
-  {
-    name: "Amanda Ribeiro",
-    role: "Nutricionista esportiva",
-    quote: "Economizei mais de 4 horas por semana nos follow-ups. As substituições já vêm prontas e os textos ficam claros para o paciente.",
-  },
-  {
-    name: "João Pereira",
-    role: "Dono de hamburgueria",
-    quote: "Usei os prompts para redes sociais e para o cardápio de delivery. A comunicação ficou profissional e o ticket médio subiu.",
-  },
-  {
-    name: "Luiza Martins",
-    role: "Criadora de conteúdo fitness",
-    quote: "Nunca mais travei em ideias. Em minutos saem roteiros, carrosséis e posts completos, já com CTA para engajar.",
-  },
+const differentials = [
+  "Não é dieta pronta da internet.",
+  "Não é aplicativo genérico.",
+  "Não é cardápio padrão para todos.",
+  "Interpreta seu corpo, entende suas fotos e calcula tudo automaticamente.",
+  "Cria um plano alimentar individual, baseado em você.",
 ];
 
-const faqs = [
-  {
-    question: "O que é o Aliment A.I.?",
-    answer: "Uma inteligência artificial focada em alimentação e nutrição que cria cardápios, posts, listas de compras e estimativas de macros.",
-  },
-  {
-    question: "Preciso ter conhecimento técnico?",
-    answer: "Não. Você conversa em linguagem natural, envia o contexto e recebe as entregas prontas para usar.",
-  },
-  {
-    question: "Funciona em celular?",
-    answer: "Sim. Todo o fluxo funciona em mobile e você pode copiar prompts e resultados direto do telefone.",
-  },
-  {
-    question: "Serve só para profissionais?",
-    answer: "Não. Nutricionistas, donos de restaurante e pessoas que querem organizar a alimentação usam da mesma forma.",
-  },
-  {
-    question: "Como ficam meus dados?",
-    answer: "O contexto enviado é usado apenas para gerar as respostas. Nenhum dado é vendido e você pode limpar o histórico quando quiser.",
-  },
-  {
-    question: "Posso adaptar restrições e metas?",
-    answer: "Sim. Inclua alergias, preferências (veg, low carb, sem lactose) e metas de tempo e a IA ajusta tudo automaticamente.",
-  },
+const examples = [
+  "Analise essa foto do meu corpo e diga qual dieta combina comigo.",
+  "Quanto tem de calorias nessa refeição?",
+  "Monte meu cardápio semanal low-carb.",
+  "Quero ganhar massa, crie meu plano.",
+];
+
+const checkoutItems = [
+  "Dieta personalizada pela IA",
+  "Análise de fotos do corpo",
+  "Estimativa de calorias por foto da comida",
+  "Cálculo de TDEE, TMB e macros",
+  "Criação de cardápios diário e semanal",
+  "Sugestões de substituições",
+  "Motivação diária",
+  "Suporte da IA 24h",
 ];
 
 function SectionHeader({ eyebrow, title, description, align = "center" }) {
@@ -253,35 +139,10 @@ function Card({ icon, title, description, children }) {
   return (
     <article className="card" data-reveal>
       {icon && <div className="icon-wrapper">{icon}</div>}
-      <h3>{title}</h3>
-      <p>{description}</p>
+      {title && <h3>{title}</h3>}
+      {description && <p>{description}</p>}
       {children}
     </article>
-  );
-}
-
-function FaqItem({ question, answer, index }) {
-  const [open, setOpen] = React.useState(false);
-  const answerId = `faq-${index}`;
-  return (
-    <div className={`faq-item ${open ? "open" : ""}`} data-reveal>
-      <button
-        className="faq-question"
-        onClick={() => setOpen((prev) => !prev)}
-        aria-expanded={open}
-        aria-controls={answerId}
-      >
-        <span>{question}</span>
-        <span className="faq-toggle" aria-hidden="true">
-          {open ? "−" : "+"}
-        </span>
-      </button>
-      {open && (
-        <p className="faq-answer" id={answerId}>
-          {answer}
-        </p>
-      )}
-    </div>
   );
 }
 
@@ -314,8 +175,8 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <a className="button small" href="#cta">
-            Testar agora
+          <a className="button small" href="#checkout">
+            Quero meu plano
           </a>
         </nav>
       </div>
@@ -328,39 +189,25 @@ function Hero() {
     <section className="hero" id="inicio">
       <div className="container hero-grid">
         <div className="hero-content" data-reveal>
-          <span className="eyebrow">IA focada em nutrição, cardápios e negócios de alimentação</span>
-          <h1>Aliment A.I. – sua inteligência artificial para cardápios, nutrição e negócios de alimentação</h1>
+          <span className="eyebrow">IA que cria seu plano alimentar de ponta a ponta</span>
+          <h1>Transforme seu corpo com o Aliment A.I. - plano criado por Inteligencia Artificial treinada por nutricionista</h1>
           <p>
-            Crie cardápios, receba macros por foto, gere posts e listas de compras em minutos. Do consultório ao
-            delivery, você ganha tempo, consistência e comunicação clara.
+            Envie seus dados, suas fotos e até fotos das refeições… e receba uma dieta personalizada, rápida e simples
+            de seguir — feita sob medida para o seu corpo e seu objetivo.
           </p>
-          <div className="hero-actions">
-            <a
-              className="button"
-              href="https://pay.kirvano.com/78e19700-8d66-4413-86a7-8c79df6b6163"
-              rel="noopener noreferrer"
-            >
-              Testar Aliment A.I. agora
-            </a>
-            <a className="button secondary" href="#prompts">
-              Ver exemplos de prompts
-            </a>
-          </div>
           <ul className="hero-highlights">
-            {heroHighlights.map((item) => (
+            {heroBullets.map((item) => (
               <li key={item}>
                 <CheckIcon /> {item}
               </li>
             ))}
           </ul>
-          <div className="stats">
-            {heroStats.map((stat) => (
-              <div className="stat" key={stat.label}>
-                <span className="stat-value">{stat.value}</span>
-                <span className="stat-label">{stat.label}</span>
-              </div>
-            ))}
+          <div className="hero-actions">
+            <a className="button" href="#checkout">
+              Quero meu plano agora
+            </a>
           </div>
+          <p className="microcopy">Acesso imediato · Funciona no celular · Sem mensalidade</p>
         </div>
 
         <div className="hero-side" data-reveal>
@@ -380,7 +227,7 @@ function Hero() {
                 <ShieldIcon /> Alertas de consistência, hidratação e sono.
               </li>
             </ul>
-            <div className="pill">Sem mensalidade. Atualizações inclusas.</div>
+            <div className="pill">Sem mensalidade. Acesso imediato.</div>
           </div>
 
           <figure className="hero-image">
@@ -400,48 +247,30 @@ function Hero() {
   );
 }
 
-function AboutSection() {
+function HowItWorksSection() {
   return (
-    <section id="sobre">
-      <div className="container about" data-reveal>
-        <SectionHeader
-          eyebrow="Sobre o produto"
-          title="Tudo o que você precisa para planejar, vender e comunicar alimentação de forma ágil"
-          description="O Aliment A.I. junta análise por imagem, prompts prontos e linguagem natural para entregar cardápios, conteúdos e listas em poucos cliques."
-          align="left"
-        />
-        <div className="about-grid">
-          <div className="about-badge">
-            <CheckIcon />
-            <p>Fluxo pensado para mobile e desktop, sem apertar texto nas bordas.</p>
-          </div>
-          <div className="about-badge">
-            <SparkIcon />
-            <p>Templates curtos para você reutilizar em consultórios, restaurantes e redes sociais.</p>
-          </div>
-          <div className="about-badge">
-            <ShieldIcon />
-            <p>Privacidade: apenas você controla o que compartilha e pode limpar o histórico.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FeaturesSection() {
-  return (
-    <section id="o-que-faz">
+    <section id="como-funciona">
       <div className="container">
         <SectionHeader
-          eyebrow="O que o Aliment A.I. faz"
-          title="Funcionalidades que saem do papel"
-          description="Peça em linguagem natural e receba cardápios, conteúdos e ajustes prontos para executar."
+          eyebrow="Como funciona"
+          title="3 passos para sua dieta personalizada"
+          description="Sem burocracia: envie, a IA analisa e você recebe o plano pronto para começar hoje."
         />
-        <div className="card-grid">
-          {features.map((feature) => (
-            <Card key={feature.title} icon={feature.icon} title={feature.title} description={feature.description} />
+        <div className="steps-grid">
+          {howSteps.map((step, index) => (
+            <div className="step-card" key={step.title} data-reveal>
+              <span className="step-number">{index + 1}</span>
+              <div>
+                <h4>{step.title}</h4>
+                <p>{step.description}</p>
+              </div>
+            </div>
           ))}
+        </div>
+        <div className="hero-actions">
+          <a className="button" href="#checkout">
+            Começar agora
+          </a>
         </div>
       </div>
     </section>
@@ -454,81 +283,12 @@ function ForWhoSection() {
       <div className="container">
         <SectionHeader
           eyebrow="Para quem é"
-          title="Da clínica ao delivery, todo mundo ganha velocidade"
-          description="Escolha o perfil e veja como a IA entrega mais tempo e clareza."
+          title="O Aliment A.I. é para você que…"
+          description="Precisa de ajuda rápida, inteligente e motivante para manter a alimentação em dia."
         />
         <div className="card-grid">
-          {audiences.map((item) => (
-            <Card key={item.title} icon={item.icon} title={item.title} description={item.description} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ExampleCard({ title, prompt }) {
-  const [copied, setCopied] = React.useState(false);
-
-  const handleCopy = () => {
-    if (navigator?.clipboard) {
-      navigator.clipboard.writeText(prompt).then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1600);
-      });
-    }
-  };
-
-  return (
-    <div className="example-card" data-reveal>
-      <div>
-        <p className="example-title">{title}</p>
-        <p className="example-prompt">{prompt}</p>
-      </div>
-      <button className="copy-button" onClick={handleCopy} aria-label={`Copiar prompt: ${title}`}>
-        {copied ? "Copiado" : "Copiar"}
-      </button>
-    </div>
-  );
-}
-
-function ExamplesSection() {
-  return (
-    <section id="prompts">
-      <div className="container">
-        <SectionHeader
-          eyebrow="Exemplos de prompts"
-          title="Copie e cole para testar agora"
-          description="Peça como preferir: cardápios, posts, lista de compras ou aproveitamento de ingredientes."
-        />
-        <div className="examples-grid">
-          {promptExamples.map((item) => (
-            <ExampleCard key={item.title} title={item.title} prompt={item.prompt} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function HowItWorksSection() {
-  return (
-    <section id="como-funciona">
-      <div className="container">
-        <SectionHeader
-          eyebrow="Como funciona"
-          title="Fluxo em 4 etapas"
-          description="Explique o que precisa, receba entregas prontas e ajuste quando quiser."
-        />
-        <div className="steps-grid">
-          {steps.map((step, index) => (
-            <div className="step-card" key={step.title} data-reveal>
-              <span className="step-number">{index + 1}</span>
-              <div>
-                <h4>{step.title}</h4>
-                <p>{step.description}</p>
-              </div>
-            </div>
+          {forWho.map((item) => (
+            <Card key={item} icon={<CheckIcon />} title={item} />
           ))}
         </div>
       </div>
@@ -540,14 +300,10 @@ function BenefitsSection() {
   return (
     <section id="beneficios">
       <div className="container">
-        <SectionHeader
-          eyebrow="Benefícios"
-          title="O que você ganha usando o Aliment A.I."
-          description="Resultados consistentes, comunicação clara e ideias sem fim."
-        />
+        <SectionHeader eyebrow="Benefícios" title="Benefícios que pesam no resultado" />
         <div className="card-grid">
           {benefits.map((benefit) => (
-            <Card key={benefit.title} icon={benefit.icon} title={benefit.title} description={benefit.description} />
+            <Card key={benefit.title} icon={benefit.icon} title={benefit.title} />
           ))}
         </div>
       </div>
@@ -555,53 +311,34 @@ function BenefitsSection() {
   );
 }
 
-function MidCta() {
+function DifferenceSection() {
   return (
-    <section className="cta mid" id="cta-meio">
+    <section id="diferente">
       <div className="container">
-        <div className="cta-content" data-reveal>
-          <h2>Teste agora e entregue um cardápio completo em minutos</h2>
-          <p>Comece pelo mobile ou desktop, copie os prompts prontos e veja a IA gerar planos e posts na hora.</p>
-          <div className="hero-actions">
-            <a
-              className="button"
-              href="https://pay.kirvano.com/78e19700-8d66-4413-86a7-8c79df6b6163"
-              rel="noopener noreferrer"
-            >
-              Começar agora com o Aliment A.I.
-            </a>
-            <a className="button secondary" href="#prompts">
-              Ver prompts em destaque
-            </a>
-          </div>
+        <SectionHeader
+          eyebrow="Por que é diferente?"
+          title="Não é dieta pronta. É IA criando para você."
+          description="Interpreta seu corpo, entende suas fotos e calcula tudo automaticamente."
+        />
+        <div className="card-grid">
+          {differentials.map((item) => (
+            <Card key={item} icon={<ShieldIcon />} title={item} />
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function TestimonialsSection() {
+function ExamplesSection() {
   return (
-    <section id="depoimentos">
+    <section id="exemplos">
       <div className="container">
-        <SectionHeader
-          eyebrow="Prova social"
-          title="Quem já acelera com o Aliment A.I."
-          description="Profissionais e criadores de conteúdo economizando horas e comunicando melhor."
-        />
-        <div className="testimonials">
-          {testimonials.map((item) => (
-            <div className="testimonial-card" key={item.name} data-reveal>
-              <div className="testimonial-header">
-                <div className="avatar" aria-hidden="true">
-                  {item.name[0]}
-                </div>
-                <div>
-                  <p className="name">{item.name}</p>
-                  <p className="goal">{item.role}</p>
-                </div>
-              </div>
-              <p className="quote">“{item.quote}”</p>
+        <SectionHeader eyebrow="Exemplos reais" title="Peça exatamente o que precisa" />
+        <div className="examples-grid">
+          {examples.map((example) => (
+            <div className="example-card" key={example} data-reveal>
+              <p className="example-prompt">{example}</p>
             </div>
           ))}
         </div>
@@ -610,19 +347,40 @@ function TestimonialsSection() {
   );
 }
 
-function FaqSection() {
+function SafetySection() {
   return (
-    <section id="faq">
+    <section id="aviso">
       <div className="container">
         <SectionHeader
-          eyebrow="FAQ"
-          title="Perguntas frequentes"
-          description="Tudo o que você precisa saber para começar com segurança."
+          eyebrow="Aviso de segurança"
+          title="Ferramenta inteligente que guia, educa e ajuda a criar disciplina alimentar"
+          description="O Aliment A.I. não substitui nutricionistas e não oferece diagnóstico médico."
         />
-        <div className="faq">
-          {faqs.map((faq, index) => (
-            <FaqItem key={faq.question} question={faq.question} answer={faq.answer} index={index} />
+      </div>
+    </section>
+  );
+}
+
+function CheckoutSection() {
+  return (
+    <section id="checkout">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Checkout"
+          title="Último passo para transformar seu corpo com Inteligência Artificial"
+          description="Libere agora o acesso completo ao Aliment A.I. e receba sua dieta personalizada em poucos minutos."
+        />
+        <div className="card-grid">
+          {checkoutItems.map((item) => (
+            <Card key={item} icon={<CheckIcon />} title={item} />
           ))}
+        </div>
+        <div className="cta checkout-cta" data-reveal>
+          <p className="microcopy warning">⚠️ Acesso limitado — quando as vagas encerram, só reabre na próxima abertura.</p>
+          <p className="microcopy">Se em 7 dias você não sentir que está mais organizado(a), disciplinado(a) e no caminho certo, devolvo seu dinheiro.</p>
+          <a className="button" href="https://pay.kirvano.com/78e19700-8d66-4413-86a7-8c79df6b6163" rel="noopener noreferrer">
+            Liberar Acesso Imediato
+          </a>
         </div>
       </div>
     </section>
@@ -633,18 +391,11 @@ function FinalCta() {
   return (
     <section className="cta final" id="cta">
       <div className="container" data-reveal>
-        <h2>Comece agora com o Aliment A.I.</h2>
-        <p>
-          Economize horas, entregue cardápios e conteúdos melhores e tenha uma IA dedicada ao seu negócio de alimentação.
-        </p>
-        <a
-          className="button"
-          href="https://pay.kirvano.com/78e19700-8d66-4413-86a7-8c79df6b6163"
-          rel="noopener noreferrer"
-        >
-          Começar agora com o Aliment A.I.
+        <h2>Está pronto(a) para transformar seu corpo com a ajuda da IA?</h2>
+        <a className="button" href="https://pay.kirvano.com/78e19700-8d66-4413-86a7-8c79df6b6163" rel="noopener noreferrer">
+          Quero meu acesso ao Aliment A.I.
         </a>
-        <p className="subtitle">Acesso imediato. Atualizações incluídas.</p>
+        <p className="subtitle">Acesso imediato · Comece em 60 segundos · Sem burocracia</p>
       </div>
     </section>
   );
@@ -656,7 +407,7 @@ function Footer() {
       <div className="container footer-inner">
         <div>
           <p className="brand">Aliment A.I.</p>
-          <p className="muted">IA feita para cardápios, nutrição e negócios de alimentação.</p>
+          <p className="muted">IA feita para cardápios e dietas personalizadas.</p>
         </div>
         <a href="#inicio" className="back-to-top">
           Voltar ao topo
@@ -693,15 +444,13 @@ function LandingPage() {
       <Navbar />
       <main>
         <Hero />
-        <AboutSection />
-        <FeaturesSection />
-        <ForWhoSection />
-        <ExamplesSection />
         <HowItWorksSection />
+        <ForWhoSection />
         <BenefitsSection />
-        <MidCta />
-        <TestimonialsSection />
-        <FaqSection />
+        <DifferenceSection />
+        <ExamplesSection />
+        <SafetySection />
+        <CheckoutSection />
         <FinalCta />
       </main>
       <Footer />
