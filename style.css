@@ -195,6 +195,12 @@ section {
   padding-top: clamp(4rem, 9vw, 6rem);
 }
 
+.section-break {
+  background: linear-gradient(135deg, rgba(46, 229, 157, 0.08), rgba(12, 51, 82, 0.08));
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+
 .hero-grid {
   display: grid;
   gap: 1.8rem;
@@ -281,6 +287,18 @@ section {
   color: var(--text);
   font-weight: 700;
   width: fit-content;
+}
+
+.section-break .pill {
+  display: flex;
+  justify-content: center;
+  margin: 0.75rem auto 0;
+}
+
+.pill.guarantee {
+  background: rgba(194, 31, 58, 0.12);
+  color: #0f1f2d;
+  font-weight: 800;
 }
 
 .hero-image {
@@ -467,6 +485,7 @@ section {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 0.5rem 0 1rem;
+  justify-content: center;
 }
 
 .trust-badge {
@@ -479,6 +498,33 @@ section {
   background: var(--surface-strong);
   color: var(--text);
   font-weight: 700;
+}
+
+.location {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(46, 229, 157, 0.14);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  font-weight: 700;
+  border: 1px solid var(--stroke);
+}
+
+.verified-badge svg {
+  width: 16px;
+  height: 16px;
 }
 
 .testimonial-card {
@@ -776,6 +822,10 @@ section {
   .cta .button,
   .checkout-cta .button {
     width: 100%;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

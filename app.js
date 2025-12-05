@@ -50,6 +50,7 @@ function ShieldIcon() {
 
 // Navegação enxuta para seções semânticas da landing.
 const navLinks = [
+  { href: "#dor", label: "Por que mudar" },
   { href: "#beneficios", label: "Benefícios" },
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#prova-social", label: "Prova social" },
@@ -59,24 +60,31 @@ const navLinks = [
 
 // Bullets de benefício direto e imediato.
 const heroBullets = [
-  "Crie cardápios completos em minutos (semanal, mensal ou personalizado).",
-  "Sugira refeições pelo que tem na geladeira ou despensa.",
-  "Gere posts, textos e materiais de nutrição em segundos.",
-  "Sem instalação, direto do navegador.",
+  "Cardápios completos em minutos (semana ou mês).",
+  "Analisa fotos/medidas e ajusta ao seu objetivo.",
+  "Sugere refeições pelo que você tem e pelo seu orçamento.",
+  "Nutricionista digital sem consulta presencial.",
+];
+
+const painBullets = [
+  "Pagou caro por consulta e recebeu cardápio igual ao de todo mundo.",
+  "Tentou seguir, mas era difícil, caro ou não encaixava na rotina.",
+  "Achou que o problema era você — disciplina, força de vontade, foco.",
+  "Começou empolgado… e terminou frustrado mais uma vez.",
 ];
 
 // Benefícios / O que ele faz
 const benefits = [
-  "Gera cardápios completos (semanal, mensal ou personalizado).",
-  "Sugere refeições com base nos alimentos que você tem.",
-  "Cria posts, textos e conteúdos para redes sociais sobre alimentação.",
-  "Oferece ideias de receitas rápidas, saudáveis e econômicas.",
-  "Auxilia na criação de cardápios profissionais para restaurantes e marmitarias.",
-  "Ajuda a montar planejamentos alimentares de forma estruturada.",
-  "Reduz drasticamente o tempo de criação de materiais nutricionais.",
-  "Considera seu objetivo (perda de peso, ganho de massa, saúde) e analisa fotos/medidas para personalizar.",
-  "Funciona como um nutricionista digital, substituindo consultas presenciais com plano completo e ajustes contínuos.",
+  "Cardápios completos (semanal ou mensal) em segundos.",
+  "Dietas personalizadas para emagrecer, ganhar massa ou manter rotina saudável.",
+  "Receitas econômicas, rápidas e do seu gosto.",
+  "Sugestões baseadas nos alimentos que você já tem.",
+  "Planejamento alimentar sem frustração, com substituições simples.",
+  "Analisa fotos/medidas e considera horário, orçamento e preferências.",
+  "Funciona como um nutricionista digital: plano completo e ajustes contínuos sem consulta presencial.",
 ];
+
+const promiseBullets = ["Praticidade", "Economia", "Personalização real", "Refeições que cabem na sua vida."];
 
 // Passo a passo
 const howSteps = [
@@ -99,19 +107,25 @@ const howSteps = [
 
 const testimonials = [
   {
-    name: "Ana Paula, Nutricionista",
-    quote: "Economizei mais de 8 horas por semana criando cardápios para meus pacientes.",
-    icon: <ShieldIcon />,
+    name: "Camila, 32 anos",
+    location: "São Paulo/SP",
+    initials: "C",
+    quote: "Economizei R$ 400 por mês e, pela primeira vez, consegui seguir uma dieta até o fim.",
+    verified: true,
   },
   {
-    name: "Felipe Mendes, Criador Fitness",
-    quote: "Uso todos os dias para gerar conteúdo no meu Instagram. Fica pronto em segundos.",
-    icon: <SparkIcon />,
+    name: "Rodrigo, 27 anos",
+    location: "Belo Horizonte/MG",
+    initials: "R",
+    quote: "A IA acerta mais meu gosto do que qualquer nutricionista que já paguei.",
+    verified: true,
   },
   {
     name: "Carla Barbosa, Empreendedora",
+    location: "Curitiba/PR",
+    initials: "C",
     quote: "Me ajudou a montar um novo cardápio inteiro para minha marmitaria em poucos minutos.",
-    icon: <CameraIcon />,
+    verified: true,
   },
 ];
 
@@ -124,7 +138,7 @@ const metrics = [
 const plans = [
   {
     name: "Plano Único — Vitalício",
-    price: "R$ XX pagamento único",
+    price: "R$ 18,90 pagamento único",
     recommended: true,
     features: [
       "Acesso ao GPT Alimentar",
@@ -142,23 +156,23 @@ const plans = [
 const faqItems = [
   {
     question: "O Aliment A.I. substitui um nutricionista?",
-    answer: "Sim. Ele atua como um nutricionista digital: cria cardápios, analisa fotos/medidas e ajusta tudo ao seu objetivo sem consulta presencial.",
+    answer: "Sim. Ele atua como um nutricionista digital: cria cardápios, analisa fotos/medidas e ajusta tudo ao seu objetivo sem consulta presencial e sem cobrar NADA.",
   },
   {
     question: "Posso usar para meus clientes?",
-    answer: "Sim! Muitos profissionais usam para agilizar atendimento e relatórios.",
+    answer: "Claro! Muitos profissionais usam para agilizar atendimento e relatórios.",
   },
   {
     question: "Preciso instalar algo?",
-    answer: "Não. Funciona 100% online, direto do navegador.",
+    answer: "Não, somente clicar no link que receberá após o pagamento. Funciona 100% online, direto do navegador.",
   },
   {
     question: "Ele é baseado em qual IA?",
-    answer: "Baseado em modelos avançados de linguagem (GPT) ajustados para alimentação.",
+    answer: "Baseado em modelos avançados de linguagem (GPT) ajustados por Nutricionistas para alimentação.",
   },
   {
-    question: "Posso testar antes de pagar?",
-    answer: "Sim! Clique no botão de teste e experimente agora.",
+    question: "Como vou receber o acesso?",
+    answer: "Após a confirmação do pagamento, imediatamente terá acesso ao link da IA.",
   },
 ];
 
@@ -228,7 +242,7 @@ function Hero() {
       <div className="container hero-grid">
         <div className="hero-content" data-reveal>
           <span className="eyebrow">IA especializada em nutrição</span>
-          <h1>Cansado de pagar uma fortuna em Nutricionistas e não obter resultados?</h1>
+          <h1>Cansado de gastar uma fortuna com nutricionistas e continuar no mesmo lugar?</h1>
           <p>
             Economize horas criando cardápios, ideias de refeições, posts e materiais nutricionais. O Aliment A.I. usa
             inteligência artificial ajustada para alimentação, analisa suas fotos/medidas e adapta tudo ao seu objetivo
@@ -244,7 +258,7 @@ function Hero() {
           </ul>
           <div className="hero-actions">
             <a className="button" href="#planos">
-              Testar Aliment A.I. Agora
+              Quero meu cardápio personalizado AGORA
             </a>
             <p className="microcopy">Não precisa instalar nada. Funciona direto do navegador.</p>
           </div>
@@ -298,9 +312,6 @@ function HowItWorksSection() {
           ))}
         </div>
         <div className="hero-actions">
-          <a className="button" href="#planos">
-            Testar Aliment A.I. agora
-          </a>
         </div>
       </div>
     </section>
@@ -319,6 +330,63 @@ function BenefitsSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function PainSection() {
+  return (
+    <section id="dor">
+      <div className="container">
+        <SectionHeader
+          title="Pare de jogar dinheiro fora com dietas que não funcionam pra você."
+          description="Obtenha resultados reais sem custo acrescentado ou frustrações desnecessárias."
+        />
+        <div className="card-grid">
+          {painBullets.map((item) => (
+            <Card key={item} title={item} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PatternBreakSection() {
+  return (
+    <section id="quebra" className="section-break">
+      <div className="container" data-reveal>
+        <SectionHeader
+          
+          title="E se uma IA criasse uma dieta 100% personalizada sem cobrar R$300, R$500 ou R$800 por consulta?"
+          description="Ela entende seu objetivo, horários, alimentos preferidos, o que há na geladeira e seu orçamento — e entrega em segundos um cardápio que funciona pra você. Simples. Direto. Efetivo."
+        />
+        <div className="pill">Sem enrolação. Sem receita impossível.</div>
+      </div>
+    </section>
+  );
+}
+
+function PromiseSection() {
+  return (
+    <section id="promessa">
+      <div className="container">
+        <SectionHeader
+          title="Resultado não vem de dietas caras. Vem de dietas que você consegue seguir."
+          description="E é exatamente isso que o Aliment A.I. entrega."
+        />
+        <div className="card-grid">
+          {promiseBullets.map((item) => (
+            <Card key={item} title={item} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function UrgencySection() {
+  return (
+    <></>
   );
 }
 
@@ -350,16 +418,28 @@ function SocialProofSection() {
           {testimonials.map((item) => (
             <article className="testimonial-card" key={item.name} data-reveal>
               <div className="testimonial-header">
-                <div className="icon-wrapper small">{item.icon}</div>
+                <div className="avatar" aria-hidden="true">
+                  {item.initials}
+                </div>
                 <div>
                   <p className="name">{item.name}</p>
+                  <p className="location">
+                    {item.location}
+                    {item.verified && (
+                      <span className="verified-badge">
+                        <CheckIcon /> Usuário verificado
+                      </span>
+                    )}
+                  </p>
                 </div>
               </div>
               <p className="quote">“{item.quote}”</p>
             </article>
           ))}
         </div>
-        <div className="pill" data-reveal>Garantia de 7 dias: não gostou, devolvemos seu dinheiro.</div>
+        <div className="pill guarantee" data-reveal>
+          <ShieldIcon /> Garantia de 7 dias: reembolso integral, sem perguntas.
+        </div>
       </div>
     </section>
   );
@@ -413,7 +493,7 @@ function PlansSection() {
                 ))}
               </ul>
               <a className="button" href="https://pay.cakto.com.br/jevbyq2_673427" rel="noopener noreferrer">
-                Quero o plano vitalício
+                Quero meu cardápio personalizado AGORA
               </a>
             </article>
           ))}
@@ -431,7 +511,7 @@ function FinalCta() {
         <a className="button" href="https://pay.cakto.com.br/jevbyq2_673427" rel="noopener noreferrer">
           Testar Aliment A.I. Agora
         </a>
-        <p className="subtitle">Leva menos de 10 segundos para começar.</p>
+        <p className="subtitle">Leva menos de 10 segundos para começar e nunca mais cair em dietas caras que não funcionam.</p>
       </div>
     </section>
   );
@@ -480,9 +560,12 @@ function LandingPage() {
       <Navbar />
       <main>
         <Hero />
+        <PainSection />
+        <PatternBreakSection />
         <BenefitsSection />
         <HowItWorksSection />
         <SocialProofSection />
+        <PromiseSection />
         <PlansSection />
         <FaqSection />
         <FinalCta />
