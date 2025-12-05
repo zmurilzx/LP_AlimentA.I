@@ -427,6 +427,11 @@ section {
   color: var(--accent);
 }
 
+.icon-wrapper.small {
+  padding: 0.6rem;
+  border: 1px solid var(--stroke);
+}
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -463,6 +468,17 @@ section {
   color: var(--accent);
 }
 
+.step-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.15rem;
+}
+
+.step-title h4 {
+  margin: 0;
+}
+
 .examples-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -477,7 +493,8 @@ section {
   box-shadow: var(--shadow);
   display: grid;
   gap: 0.6rem;
-  justify-content: space-between;
+  justify-items: start;
+  align-content: start;
 }
 
 .example-title {
@@ -488,6 +505,10 @@ section {
 .example-prompt {
   color: var(--muted);
   font-size: 0.98rem;
+}
+
+.example-card .icon-wrapper {
+  margin-bottom: 0.2rem;
 }
 
 .copy-button {
@@ -725,6 +746,18 @@ section {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .button,
+  .cta .button,
+  .checkout-cta .button {
+    width: 100%;
   }
 }
 

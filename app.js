@@ -49,12 +49,8 @@ function ShieldIcon() {
 }
 
 const navLinks = [
-  { href: "#inicio", label: "Início" },
   { href: "#como-funciona", label: "Como funciona" },
-  { href: "#para-quem", label: "Para quem" },
   { href: "#beneficios", label: "Benefícios" },
-  { href: "#diferente", label: "Diferencial" },
-  { href: "#exemplos", label: "Exemplos" },
   { href: "#checkout", label: "Checkout" },
 ];
 
@@ -69,14 +65,17 @@ const howSteps = [
   {
     title: "Você envia seus dados",
     description: "Altura, peso, idade, rotina, objetivo e, se quiser, fotos do seu corpo.",
+    icon: <CameraIcon />,
   },
   {
     title: "A IA analisa tudo automaticamente",
     description: "Interpreta suas imagens, calcula calorias ideais e entende o seu corpo.",
+    icon: <SparkIcon />,
   },
   {
     title: "Você recebe sua dieta personalizada",
     description: "Cardápio, calorias diárias, sugestões e tudo o que precisa para começar hoje.",
+    icon: <LeafIcon />,
   },
 ];
 
@@ -108,10 +107,31 @@ const differentials = [
 ];
 
 const examples = [
-  "Analise essa foto do meu corpo e diga qual dieta combina comigo.",
-  "Quanto tem de calorias nessa refeição?",
-  "Monte meu cardápio semanal low-carb.",
-  "Quero ganhar massa, crie meu plano.",
+  { prompt: "Analise essa foto do meu corpo e diga qual dieta combina comigo.", icon: <CameraIcon /> },
+  { prompt: "Quanto tem de calorias nessa refeição?", icon: <LeafIcon /> },
+  { prompt: "Monte meu cardápio semanal low-carb.", icon: <SparkIcon /> },
+  { prompt: "Quero ganhar massa, crie meu plano.", icon: <CheckIcon /> },
+];
+
+const testimonials = [
+  {
+    name: "Patrícia, 34",
+    goal: "Perdeu 5kg em 6 semanas",
+    quote: "A IA montou cardápio que coube na minha rotina corrida. As fotos das refeições viraram macros automáticas.",
+    icon: <ShieldIcon />,
+  },
+  {
+    name: "Bruno, 28",
+    goal: "Ganho de massa",
+    quote: "Usei foto do prato e vi na hora onde ajustar proteína e carbo. Em 4 semanas já senti diferença.",
+    icon: <SparkIcon />,
+  },
+  {
+    name: "Lívia, 41",
+    goal: "Organização alimentar",
+    quote: "Planos semanais com substituições simples e lista de compras. Parei de sofrer pensando no que comer.",
+    icon: <LeafIcon />,
+  },
 ];
 
 const checkoutItems = [
@@ -136,9 +156,10 @@ function SectionHeader({ eyebrow, title, description, align = "center" }) {
 }
 
 function Card({ icon, title, description, children }) {
+  const cardIcon = icon ?? <CheckIcon />;
   return (
     <article className="card" data-reveal>
-      {icon && <div className="icon-wrapper">{icon}</div>}
+      <div className="icon-wrapper">{cardIcon}</div>
       {title && <h3>{title}</h3>}
       {description && <p>{description}</p>}
       {children}
@@ -176,7 +197,7 @@ function Navbar() {
             ))}
           </ul>
           <a className="button small" href="#checkout">
-            Quero meu plano
+            Receber dieta personalizada
           </a>
         </nav>
       </div>
@@ -190,10 +211,10 @@ function Hero() {
       <div className="container hero-grid">
         <div className="hero-content" data-reveal>
           <span className="eyebrow">IA que cria seu plano alimentar de ponta a ponta</span>
-          <h1>Transforme seu corpo com o Aliment A.I. - plano criado por Inteligencia Artificial treinada por nutricionista</h1>
+          <h1>Receba uma dieta personalizada em minutos, com macros e cardápios feitos para o seu corpo.</h1>
           <p>
-            Envie seus dados, suas fotos e até fotos das refeições… e receba uma dieta personalizada, rápida e simples
-            de seguir — feita sob medida para o seu corpo e seu objetivo.
+            Envie seus dados e fotos de corpo ou refeições e a IA entrega cardápio, calorias, substituições e alertas
+            de consistência para você seguir sem sofrimento.
           </p>
           <ul className="hero-highlights">
             {heroBullets.map((item) => (
@@ -204,7 +225,7 @@ function Hero() {
           </ul>
           <div className="hero-actions">
             <a className="button" href="#checkout">
-              Quero meu plano agora
+              Receber minha dieta personalizada
             </a>
           </div>
           <p className="microcopy">Acesso imediato · Funciona no celular · Sem mensalidade</p>
@@ -260,8 +281,11 @@ function HowItWorksSection() {
           {howSteps.map((step, index) => (
             <div className="step-card" key={step.title} data-reveal>
               <span className="step-number">{index + 1}</span>
-              <div>
-                <h4>{step.title}</h4>
+              <div className="step-body">
+                <div className="step-title">
+                  <span className="icon-wrapper small">{step.icon}</span>
+                  <h4>{step.title}</h4>
+                </div>
                 <p>{step.description}</p>
               </div>
             </div>
@@ -337,11 +361,41 @@ function ExamplesSection() {
         <SectionHeader eyebrow="Exemplos reais" title="Peça exatamente o que precisa" />
         <div className="examples-grid">
           {examples.map((example) => (
-            <div className="example-card" key={example} data-reveal>
-              <p className="example-prompt">{example}</p>
+            <div className="example-card" key={example.prompt} data-reveal>
+              <div className="icon-wrapper small">{example.icon}</div>
+              <p className="example-prompt">{example.prompt}</p>
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function SocialProofSection() {
+  return (
+    <section id="prova-social">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Prova social"
+          title="Quem já testou aprovou"
+          description="Depoimentos reais de quem usou a IA para montar dieta, ajustar macros e manter consistência."
+        />
+        <div className="testimonials">
+          {testimonials.map((item) => (
+            <article className="testimonial-card" key={item.name} data-reveal>
+              <div className="testimonial-header">
+                <div className="icon-wrapper small">{item.icon}</div>
+                <div>
+                  <p className="name">{item.name}</p>
+                  <p className="goal">{item.goal}</p>
+                </div>
+              </div>
+              <p className="quote">“{item.quote}”</p>
+            </article>
+          ))}
+        </div>
+        <div className="pill" data-reveal>Garantia de 7 dias: não gostou, devolvemos seu dinheiro.</div>
       </div>
     </section>
   );
@@ -356,6 +410,10 @@ function SafetySection() {
           title="Ferramenta inteligente que guia, educa e ajuda a criar disciplina alimentar"
           description="O Aliment A.I. não substitui nutricionistas e não oferece diagnóstico médico."
         />
+        <p className="microcopy">
+          Seus dados e fotos são usados apenas para gerar seu plano e seguem práticas da LGPD; não compartilhamos nem
+          usamos para outros fins.
+        </p>
       </div>
     </section>
   );
@@ -449,6 +507,7 @@ function LandingPage() {
         <BenefitsSection />
         <DifferenceSection />
         <ExamplesSection />
+        <SocialProofSection />
         <SafetySection />
         <CheckoutSection />
         <FinalCta />
