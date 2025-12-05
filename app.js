@@ -48,69 +48,70 @@ function ShieldIcon() {
   );
 }
 
+// Conversão: copy orientada a benefício, CTA acima da dobra, prova social e FAQ para reduzir objeções.
 const navLinks = [
+  { href: "#para-quem", label: "Para quem é" },
+  { href: "#o-que-faz", label: "O que faz" },
   { href: "#como-funciona", label: "Como funciona" },
-  { href: "#beneficios", label: "Benefícios" },
-  { href: "#checkout", label: "Checkout" },
+  { href: "#prova-social", label: "Depoimentos" },
+  { href: "#planos", label: "Planos" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 const heroBullets = [
-  "Resultados mais rápidos",
-  "IA que realmente entende você",
-  "Dietas inteligentes sem sofrimento",
-  "IA treinada por nutricionista",
+  "Gera cardápios semanais ou mensais personalizados.",
+  "Sugere receitas com os ingredientes que você tem.",
+  "Calcula macros automaticamente por foto das refeições.",
+  "Cria posts e textos de nutrição em segundos.",
 ];
 
 const howSteps = [
   {
     title: "Você envia seus dados",
-    description: "Altura, peso, idade, rotina, objetivo e, se quiser, fotos do seu corpo.",
+    description: "Objetivo, restrições, preferências, rotina e, se quiser, fotos do corpo ou pratos.",
     icon: <CameraIcon />,
   },
   {
     title: "A IA analisa tudo automaticamente",
-    description: "Interpreta suas imagens, calcula calorias ideais e entende o seu corpo.",
+    description: "Interpreta imagens, calcula calorias e entende seu padrão alimentar para evitar dietas genéricas.",
     icon: <SparkIcon />,
   },
   {
     title: "Você recebe sua dieta personalizada",
-    description: "Cardápio, calorias diárias, sugestões e tudo o que precisa para começar hoje.",
+    description: "Cardápio, macros, substituições, lista de compras e posts prontos para clientes ou seguidores.",
     icon: <LeafIcon />,
   },
 ];
 
 const forWho = [
-  "Quer perder peso sem sofrer",
-  "Cansou de dietas que você não consegue seguir",
-  "Não sabe o que comer no dia a dia",
-  "Quer ganhar massa muscular com mais organização",
-  "Não tem tempo para ir a nutricionistas",
-  "Quer ajuda rápida, inteligente e motivante",
+  "Nutricionistas que querem ganhar velocidade com clientes.",
+  "Criadores de conteúdo de alimentação e saúde.",
+  "Pessoas que querem organizar refeições sem planilhas.",
+  "Quem precisa de cardápio sob medida (low-carb, ganho de massa, etc.).",
+  "Quem tem pouco tempo para planejar o que vai comer.",
 ];
 
-const benefits = [
-  { title: "Dieta montada em minutos", icon: <ClockIcon /> },
-  { title: "Entende suas fotos (corpo + comida)", icon: <CameraIcon /> },
-  { title: "Ajusta o plano conforme sua rotina", icon: <SparkIcon /> },
-  { title: "Cálculo automático de calorias", icon: <CheckIcon /> },
-  { title: "Motivação diária", icon: <ShieldIcon /> },
-  { title: "Sugestões simples e baratas", icon: <LeafIcon /> },
-  { title: "Tecnologia avançada que evolui", icon: <SparkIcon /> },
-];
-
-const differentials = [
-  "Não é dieta pronta da internet.",
-  "Não é aplicativo genérico.",
-  "Não é cardápio padrão para todos.",
-  "Interpreta seu corpo, entende suas fotos e calcula tudo automaticamente.",
-  "Cria um plano alimentar individual, baseado em você.",
-];
-
-const examples = [
-  { prompt: "Analise essa foto do meu corpo e diga qual dieta combina comigo.", icon: <CameraIcon /> },
-  { prompt: "Quanto tem de calorias nessa refeição?", icon: <LeafIcon /> },
-  { prompt: "Monte meu cardápio semanal low-carb.", icon: <SparkIcon /> },
-  { prompt: "Quero ganhar massa, crie meu plano.", icon: <CheckIcon /> },
+const whatItDoes = [
+  {
+    title: "Cardápios prontos em minutos",
+    description: "Sem planilhas nem fórmulas: a IA monta semana ou mês com substituições e macros.",
+    icon: <ClockIcon />,
+  },
+  {
+    title: "Sugestões por ingredientes",
+    description: "Diga o que tem em casa e receba receitas rápidas, com macro já calculado.",
+    icon: <LeafIcon />,
+  },
+  {
+    title: "Conteúdo para nutricionistas",
+    description: "Posts, e-books e textos de educação alimentar gerados em segundos.",
+    icon: <SparkIcon />,
+  },
+  {
+    title: "Macros por foto",
+    description: "Envie foto do prato e receba estimativas de calorias e ajustes recomendados.",
+    icon: <CameraIcon />,
+  },
 ];
 
 const testimonials = [
@@ -135,14 +136,36 @@ const testimonials = [
 ];
 
 const checkoutItems = [
-  "Dieta personalizada pela IA",
-  "Análise de fotos do corpo",
-  "Estimativa de calorias por foto da comida",
-  "Cálculo de TDEE, TMB e macros",
-  "Criação de cardápios diário e semanal",
-  "Sugestões de substituições",
-  "Motivação diária",
-  "Suporte da IA 24h",
+  "Cardápios personalizados (semanal/mensal) em minutos",
+  "Macros automáticas por foto de prato ou corpo",
+  "Sugestões de receitas pelo que você tem na cozinha",
+  "Posts e textos prontos sobre nutrição e alimentação",
+  "Lista de compras otimizada e substituições",
+  "Ajustes contínuos conforme rotina e objetivo",
+  "Garantia de 7 dias: não gostou, devolvemos",
+];
+
+const faqItems = [
+  {
+    question: "A IA substitui nutricionista?",
+    answer: "Não. Ela acelera cálculos, cardápios e conteúdos, mas não fornece diagnóstico ou prescrição médica.",
+  },
+  {
+    question: "Posso usar com clientes da minha clínica ou consultoria?",
+    answer: "Sim. Você pode gerar cardápios, posts e materiais educativos para clientes, mantendo sua supervisão profissional.",
+  },
+  {
+    question: "Preciso instalar algo?",
+    answer: "Não. Acesso direto via web. É só preencher seus dados e usar no celular ou computador.",
+  },
+  {
+    question: "Como ficam meus dados e fotos?",
+    answer: "Usamos apenas para gerar seu plano. Não compartilhamos com terceiros e seguimos princípios da LGPD.",
+  },
+  {
+    question: "O que recebo imediatamente após pagar?",
+    answer: "Acesso completo ao Aliment A.I., com geração de cardápios, macros por foto e conteúdos prontos.",
+  },
 ];
 
 function SectionHeader({ eyebrow, title, description, align = "center" }) {
@@ -196,8 +219,8 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <a className="button small" href="#checkout">
-            Receber dieta personalizada
+          <a className="button small" href="#planos">
+            Testar agora
           </a>
         </nav>
       </div>
@@ -211,10 +234,10 @@ function Hero() {
       <div className="container hero-grid">
         <div className="hero-content" data-reveal>
           <span className="eyebrow">IA que cria seu plano alimentar de ponta a ponta</span>
-          <h1>Receba uma dieta personalizada em minutos, com macros e cardápios feitos para o seu corpo.</h1>
+          <h1>Seu assistente de IA para cardápios, dietas e conteúdo de nutrição.</h1>
           <p>
-            Envie seus dados e fotos de corpo ou refeições e a IA entrega cardápio, calorias, substituições e alertas
-            de consistência para você seguir sem sofrimento.
+            Gere cardápios personalizados, sugestões de refeições e posts sobre alimentação em poucos segundos, usando o
+            poder do GPT adaptado para nutrição.
           </p>
           <ul className="hero-highlights">
             {heroBullets.map((item) => (
@@ -224,8 +247,8 @@ function Hero() {
             ))}
           </ul>
           <div className="hero-actions">
-            <a className="button" href="#checkout">
-              Receber minha dieta personalizada
+            <a className="button" href="#planos">
+              Testar Aliment A.I. agora
             </a>
           </div>
           <p className="microcopy">Acesso imediato · Funciona no celular · Sem mensalidade</p>
@@ -292,8 +315,8 @@ function HowItWorksSection() {
           ))}
         </div>
         <div className="hero-actions">
-          <a className="button" href="#checkout">
-            Começar agora
+          <a className="button" href="#planos">
+            Testar Aliment A.I. agora
           </a>
         </div>
       </div>
@@ -308,7 +331,7 @@ function ForWhoSection() {
         <SectionHeader
           eyebrow="Para quem é"
           title="O Aliment A.I. é para você que…"
-          description="Precisa de ajuda rápida, inteligente e motivante para manter a alimentação em dia."
+          description="Precisa de cardápios prontos, conteúdo de nutrição e organização alimentar sem perder tempo."
         />
         <div className="card-grid">
           {forWho.map((item) => (
@@ -320,51 +343,18 @@ function ForWhoSection() {
   );
 }
 
-function BenefitsSection() {
+function WhatItDoesSection() {
   return (
-    <section id="beneficios">
-      <div className="container">
-        <SectionHeader eyebrow="Benefícios" title="Benefícios que pesam no resultado" />
-        <div className="card-grid">
-          {benefits.map((benefit) => (
-            <Card key={benefit.title} icon={benefit.icon} title={benefit.title} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function DifferenceSection() {
-  return (
-    <section id="diferente">
+    <section id="o-que-faz">
       <div className="container">
         <SectionHeader
-          eyebrow="Por que é diferente?"
-          title="Não é dieta pronta. É IA criando para você."
-          description="Interpreta seu corpo, entende suas fotos e calcula tudo automaticamente."
+          eyebrow="O que ele faz"
+          title="Tudo o que você precisa para criar cardápios, macros e conteúdo em minutos"
+          description="IA especializada em nutrição: de cardápios a posts, passando por cálculo de macros com foto."
         />
         <div className="card-grid">
-          {differentials.map((item) => (
-            <Card key={item} icon={<ShieldIcon />} title={item} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ExamplesSection() {
-  return (
-    <section id="exemplos">
-      <div className="container">
-        <SectionHeader eyebrow="Exemplos reais" title="Peça exatamente o que precisa" />
-        <div className="examples-grid">
-          {examples.map((example) => (
-            <div className="example-card" key={example.prompt} data-reveal>
-              <div className="icon-wrapper small">{example.icon}</div>
-              <p className="example-prompt">{example.prompt}</p>
-            </div>
+          {whatItDoes.map((item) => (
+            <Card key={item.title} icon={item.icon} title={item.title} description={item.description} />
           ))}
         </div>
       </div>
@@ -401,32 +391,39 @@ function SocialProofSection() {
   );
 }
 
-function SafetySection() {
+function FaqSection() {
   return (
-    <section id="aviso">
+    <section id="faq">
       <div className="container">
         <SectionHeader
-          eyebrow="Aviso de segurança"
-          title="Ferramenta inteligente que guia, educa e ajuda a criar disciplina alimentar"
-          description="O Aliment A.I. não substitui nutricionistas e não oferece diagnóstico médico."
+          eyebrow="FAQ"
+          title="Perguntas frequentes"
+          description="Dúvidas que mais aparecem de nutricionistas, criadores e pessoas que querem organizar a alimentação."
         />
-        <p className="microcopy">
-          Seus dados e fotos são usados apenas para gerar seu plano e seguem práticas da LGPD; não compartilhamos nem
-          usamos para outros fins.
-        </p>
+        <div className="faq">
+          {faqItems.map((item) => (
+            <details className="faq-item" key={item.question} data-reveal>
+              <summary className="faq-question">
+                <span>{item.question}</span>
+                <span className="faq-toggle">+</span>
+              </summary>
+              <p className="faq-answer">{item.answer}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
-function CheckoutSection() {
+function PlansSection() {
   return (
-    <section id="checkout">
+    <section id="planos">
       <div className="container">
         <SectionHeader
-          eyebrow="Checkout"
-          title="Último passo para transformar seu corpo com Inteligência Artificial"
-          description="Libere agora o acesso completo ao Aliment A.I. e receba sua dieta personalizada em poucos minutos."
+          eyebrow="Planos"
+          title="Oferta especial para testar o Aliment A.I."
+          description="Acesso imediato ao assistente de IA para cardápios, macros por foto e conteúdo de nutrição."
         />
         <div className="card-grid">
           {checkoutItems.map((item) => (
@@ -437,7 +434,7 @@ function CheckoutSection() {
           <p className="microcopy warning">⚠️ Acesso limitado — quando as vagas encerram, só reabre na próxima abertura.</p>
           <p className="microcopy">Se em 7 dias você não sentir que está mais organizado(a), disciplinado(a) e no caminho certo, devolvo seu dinheiro.</p>
           <a className="button" href="https://pay.cakto.com.br/jevbyq2_673427" rel="noopener noreferrer">
-            Liberar Acesso Imediato
+            Testar Aliment A.I. agora
           </a>
         </div>
       </div>
@@ -449,9 +446,9 @@ function FinalCta() {
   return (
     <section className="cta final" id="cta">
       <div className="container" data-reveal>
-        <h2>Está pronto(a) para transformar seu corpo com a ajuda da IA?</h2>
+        <h2>Pronto(a) para ter um assistente de nutrição que entrega cardápios e conteúdo em segundos?</h2>
         <a className="button" href="https://pay.cakto.com.br/jevbyq2_673427" rel="noopener noreferrer">
-          Quero meu acesso ao Aliment A.I.
+          Testar Aliment A.I. agora
         </a>
         <p className="subtitle">Acesso imediato · Comece em 60 segundos · Sem burocracia</p>
       </div>
@@ -502,14 +499,12 @@ function LandingPage() {
       <Navbar />
       <main>
         <Hero />
-        <HowItWorksSection />
         <ForWhoSection />
-        <BenefitsSection />
-        <DifferenceSection />
-        <ExamplesSection />
+        <WhatItDoesSection />
+        <HowItWorksSection />
         <SocialProofSection />
-        <SafetySection />
-        <CheckoutSection />
+        <PlansSection />
+        <FaqSection />
         <FinalCta />
       </main>
       <Footer />

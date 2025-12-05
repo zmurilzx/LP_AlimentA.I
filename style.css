@@ -242,31 +242,6 @@ section {
   color: var(--accent-strong);
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.8rem;
-}
-
-.stat {
-  background: var(--surface);
-  border: 1px solid var(--stroke);
-  border-radius: var(--radius);
-  padding: 1rem 1.1rem;
-  box-shadow: var(--shadow);
-}
-
-.stat-value {
-  display: block;
-  font-weight: 800;
-  color: var(--accent);
-  font-size: 1.2rem;
-}
-
-.stat-label {
-  color: var(--muted);
-}
-
 .hero-side {
   display: grid;
   gap: 1.1rem;
@@ -366,32 +341,6 @@ section {
   margin-top: 0.4rem;
 }
 
-.about {
-  background: #ffffff;
-  border: 1px solid var(--stroke);
-  border-radius: 22px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-}
-
-.about-grid {
-  margin-top: 1.2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.about-badge {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.6rem;
-  padding: 0.85rem 0.95rem;
-  border-radius: 16px;
-  background: var(--surface-strong);
-  border: 1px solid var(--stroke);
-  color: var(--text);
-}
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -479,55 +428,6 @@ section {
   margin: 0;
 }
 
-.examples-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-}
-
-.example-card {
-  background: var(--surface-strong);
-  border: 1px solid var(--stroke);
-  border-radius: var(--radius);
-  padding: 1.1rem;
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 0.6rem;
-  justify-items: start;
-  align-content: start;
-}
-
-.example-title {
-  color: var(--text);
-  font-weight: 700;
-}
-
-.example-prompt {
-  color: var(--muted);
-  font-size: 0.98rem;
-}
-
-.example-card .icon-wrapper {
-  margin-bottom: 0.2rem;
-}
-
-.copy-button {
-  justify-self: start;
-  padding: 0.55rem 0.95rem;
-  border-radius: 12px;
-  border: 1px solid var(--stroke);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.copy-button:hover {
-  background: rgba(46, 229, 157, 0.12);
-  transform: translateY(-2px);
-}
-
 .testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -596,6 +496,14 @@ section {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--shadow);
+}
+
+.faq-item summary {
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
 }
 
 .faq-question {
@@ -681,10 +589,6 @@ section {
 .back-to-top {
   color: #c3e6d5;
   font-weight: 700;
-}
-
-.floating-button {
-  display: none;
 }
 
 [data-reveal] {
